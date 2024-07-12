@@ -10,6 +10,7 @@
     "build-hosted": "tsc && vite build --mode prod",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "start": "vite",
     "test": "jest"
   },
   "dependencies": {
