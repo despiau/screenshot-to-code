@@ -174,9 +174,9 @@ function ImageUpload({ setReferenceImages }: Props) {
         </div>
       )}
       {screenRecorderState === ScreenRecorderState.INITIAL && (
-        <div className="text-center text-sm text-slate-800 mt-4">
-          <Badge>New!</Badge> Upload a screen recording (.mp4, .mov) or record
-          your screen to clone a whole app (experimental).{" "}
+    <div className="text-center text-sm text-slate-800 mt-4">
+      Upload a screen recording (.mp4, .mov) or record
+      your screen to clone a whole app .{" "}
           <a
             className="underline"
             href={URLS["intro-to-video"]}
