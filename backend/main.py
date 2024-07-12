@@ -39,7 +39,7 @@ def take_screenshot(url):
         raise Exception(f"Error taking screenshot: {response.status_code} - {response.text}")
 
 @app.post("/screenshot")
-async def screenshot_endpoint(request: Request):
+async def screenshot(request: Request):
     data = await request.json()
     url = data.get("url")
     if not url:
