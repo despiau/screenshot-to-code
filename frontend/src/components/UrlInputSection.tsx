@@ -45,8 +45,9 @@ export function UrlInputSection({ doCreate, screenshotOneApiKey }: Props) {
           throw new Error("Failed to capture screenshot");
         }
 
-        const res = await response.json();
-        doCreate([res.url], "image");
+        const res = await response.blob();
+        const imageUrl = URL.createObjectURL(res);
+        doCreate([imageUrl], "image");
       } catch (error) {
         console.error(error);
         toast.error(

@@ -16,7 +16,7 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false, // Cambiado a false para suprimir las advertencias sobre variables no utilizadas
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 

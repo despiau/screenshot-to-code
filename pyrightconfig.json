@@ -1,0 +1,9 @@
+{
+    "typeCheckingMode": "strict",
+    "reportUnknownVariableType": "warning",
+    "reportUnknownParameterType": "warning",
+    "reportUnknownMemberType": "warning",
+    "reportMissingParameterType": "error",
+    "reportMissingTypeArgument": "error"
+  }
+  

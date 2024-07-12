@@ -1,0 +1,7 @@
+cd C:\Users\despi\Deploy\screenshot-to-code\backend
+poetry run uvicorn main:app --reload --port 7001
+
+
+cd C:\Users\despi\Deploy\screenshot-to-code\frontend
+yarn install
+yarn dev
