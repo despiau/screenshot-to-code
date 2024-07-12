@@ -4,7 +4,6 @@ import { useDropzone } from "react-dropzone";
 // import { PromptImage } from "../../../types";
 import { toast } from "react-hot-toast";
 import { URLS } from "../urls";
-import { Badge } from "./ui/badge";
 import ScreenRecorder from "./recording/ScreenRecorder";
 import { ScreenRecorderState } from "../types";
 
@@ -113,40 +112,6 @@ function ImageUpload({ setReferenceImages }: Props) {
       },
     });
 
-  // const pasteEvent = useCallback(
-  //   (event: ClipboardEvent) => {
-  //     const clipboardData = event.clipboardData;
-  //     if (!clipboardData) return;
-
-  //     const items = clipboardData.items;
-  //     const files = [];
-  //     for (let i = 0; i < items.length; i++) {
-  //       const file = items[i].getAsFile();
-  //       if (file && file.type.startsWith("image/")) {
-  //         files.push(file);
-  //       }
-  //     }
-
-  //     // Convert images to data URLs and set the prompt images state
-  //     Promise.all(files.map((file) => fileToDataURL(file)))
-  //       .then((dataUrls) => {
-  //         if (dataUrls.length > 0) {
-  //           setReferenceImages(dataUrls.map((dataUrl) => dataUrl as string));
-  //         }
-  //       })
-  //       .catch((error) => {
-  //         // TODO: Display error to user
-  //         console.error("Error reading files:", error);
-  //       });
-  //   },
-  //   [setReferenceImages]
-  // );
-
-  // TODO: Make sure we don't listen to paste events in text input components
-  // useEffect(() => {
-  //   window.addEventListener("paste", pasteEvent);
-  // }, [pasteEvent]);
-
   useEffect(() => {
     return () => files.forEach((file) => URL.revokeObjectURL(file.preview));
   }, [files]); // Added files as a dependency
@@ -174,9 +139,9 @@ function ImageUpload({ setReferenceImages }: Props) {
         </div>
       )}
       {screenRecorderState === ScreenRecorderState.INITIAL && (
-    <div className="text-center text-sm text-slate-800 mt-4">
-      Upload a screen recording (.mp4, .mov) or record
-      your screen to clone a whole app .{" "}
+        <div className="text-center text-sm text-slate-800 mt-4">
+          Upload a screen recording (.mp4, .mov) or record
+          your screen to clone a whole app.{" "}
           <a
             className="underline"
             href={URLS["intro-to-video"]}
